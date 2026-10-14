@@ -61,3 +61,15 @@ Given the strict 4 hour scope, I prioritized a complete, polished MVP over addit
 5. Product / UX Approach
 The goal was to keep the experience simple while making it feel polished and engaging.
 The app opens directly into discovery, with a prominent action to add a business. Search is visible and lightweight, and business listings use a clean card layout with strong typography and clear hierarchy. I intentionally kept the feature set small so the core create → browse → search flow feels complete rather than overbuilt.
+
+### Video Demonstration:
+
+
+
+https://github.com/user-attachments/assets/e67e94d2-e205-4818-966b-32e57cc5d7e7
+
+
+
+
+
+
