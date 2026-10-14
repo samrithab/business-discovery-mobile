@@ -1,18 +1,31 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useColorScheme } from 'react-native';
+import { Stack } from 'expo-router';
+import { BusinessProvider } from '../businesses';
+import { colors } from '../theme';
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
-
-SplashScreen.preventAutoHideAsync();
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+export default function Layout() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <BusinessProvider>
+      <Stack
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: colors.background,
+          },
+          headerTintColor: colors.ink,
+          headerShadowVisible: false,
+          headerTitleStyle: {
+            fontWeight: '700',
+          },
+        }}
+      >
+        <Stack.Screen
+          name="index"
+          options={{ title: 'Discover' }}
+        />
+        <Stack.Screen
+          name="create"
+          options={{ title: 'Add a business' }}
+        />
+      </Stack>
+    </BusinessProvider>
   );
 }
